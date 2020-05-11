@@ -1,0 +1,57 @@
+---
+name: NPC
+author: RAG3N
+version: 1.5.20-uhappynow
+description: npc, the npc plugin for PocketMine-MP
+main: NPC\Main
+api:
+- 3.9.0
+mcpe-protocol:
+- 361
+- 388
+- 389
+- 390
+website: soon
+commands:
+  npc:
+    description: Create a npc npc, or edit an existing one!
+    usage: /npc [args]...
+    permission: npc.command
+  rca:
+    description: Execute a command as someone else!
+    usage: /rca <player> <command>
+    permission: npc.rca
+  nothing:
+    description: Do nothing!
+    usage: /nothing
+    permission: npc.nothing
+permissions:
+  npc:
+    description: Autoriser l’utilisation de toutes les commandes npc
+    default: op
+    children:
+      npc.command:
+        description: Autoriser l’utilisation /npc
+        default: op
+      npc.create:
+        description: Autoriser l’utilisation de la commande /npc create
+        default: op
+      npc.edit:
+        description: Autoriser l’édition des données de l’entité npc avec /npc edit
+        default: op
+      npc.nothing:
+        description: Permettre de ne rien faire
+        default: op
+      npc.rca:
+        description: Autoriser la course des commandes comme d’autres joueurs
+        default: op
+      npc.remove:
+        description: Autoriser la suppression des entités npc avec /npc remove [id]
+        default: op
+      npc.id:
+        description: Autoriser l’identification de l’entité de visualisation
+        default: op
+      npc.help:
+        description: Autoriser l’affichage de la page d’aide npc
+        default: op
+...
